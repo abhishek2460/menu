@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Presentation</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="menuImages">
+        <!-- Images will be dynamically added here -->
+    </div>
+
+    <script>
+        // Add image URLs to the array
+        const imageUrls = [
+            'https://i.ibb.co/26sDwPS/image-001.png',
+            'https://i.ibb.co/t3nLPNh/image-002.png',
+            'https://i.ibb.co/zGDNc7q/image-003.png',
+            'https://i.ibb.co/tbC1cxK/image-004.png',
+            'https://i.ibb.co/N7Mr1X0/image-005.png',
+            'https://i.ibb.co/xLDjbXL/image-006.png',
+            'https://i.ibb.co/hYwN1TQ/image-007.png',
+            'https://i.ibb.co/4VW8H5R/image-008.png'
+            // Add more URLs as needed
+        ];
+
+        // Dynamically create image elements
+        const menuImagesContainer = document.getElementById('menuImages');
+        imageUrls.forEach(url => {
+            const imgElement = document.createElement('img');
+            imgElement.src = url;
+            menuImagesContainer.appendChild(imgElement);
+        });
+    </script>
+</body>
+
+</html>
